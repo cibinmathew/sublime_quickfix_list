@@ -1,0 +1,16 @@
+[
+    {
+        "caption": "Quickfix List: Next match",
+        "command": "quickfix_list",
+        "args": {
+            "action": "next"
+        }
+    },
+    {
+        "caption": "Quickfix List: Open quickfix list file",
+        "command": "quickfix_list",
+        "args": {
+            "action": "open"
+        }
+    }
+]
