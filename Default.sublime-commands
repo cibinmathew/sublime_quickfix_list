@@ -7,6 +7,13 @@
         }
     },
     {
+        "caption": "Quickfix List: Previous match",
+        "command": "quickfix_list",
+        "args": {
+            "action": "prev"
+        }
+    },
+    {
         "caption": "Quickfix List: Open quickfix list file",
         "command": "quickfix_list",
         "args": {

@@ -5,18 +5,23 @@ provides an easy way to **navigate back and forth through list of files** popula
 
 ![Alt Text](images/demo.gif)
 
+## Menu items
+
+![Alt Text](images/menu.png)
+
 - `Quickfix List: Next match`: Go to next match
+- `Quickfix List: Previous match`: Go to previous match
 - `Quickfix List: Open quickfix list file`: Open the custom file
 
 ## How to Use
 - Save/open `QUICKFIX_CUSTOM_FILE`. By default it is located at `/tmp/sublime_quickfix_list.txt`
-```
+```sh
 grep -inH quick "${PWD}"/*.py > /tmp/sublime_quickfix_list.txt
  ```
 - From Command palette, run `Quickfix List: Next match`
 ## Key bindings
 No default keybinding is provided. Use below sample as necessary
-```
+```json
 [
     { "keys": ["ctrl+r"], "command": "quickfix_list" }
 ]
@@ -29,7 +34,7 @@ todo
 copy this repository into the [Packages](https://docs.sublimetext.io/guide/extensibility/packages.html#package-locations-and-abbreviations) directory
 1. cd into the packages directory. 
 2. clone
-  ```sh
+  ```bash
   $ git clone git@github.com:cibinmathew/sublime_quickfix_list.git
   ```
 
