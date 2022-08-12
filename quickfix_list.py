@@ -27,27 +27,28 @@ class QuickfixList(sublime_plugin.TextCommand):
         )
         global QuickFix_CurrentLine
 
-        if action == "next":
-            for region in self.view.sel():
-                with open(QUICKFIX_CUSTOM_FILE) as f:
-                    txt = f.read()
-                    QuickFix_CurrentLine += 1
-                    QuickFix_CurrentLine = (
-                        0
-                        if QuickFix_CurrentLine >= len(txt.splitlines())
-                        else QuickFix_CurrentLine
-                    )
-                    filename = txt.splitlines()[QuickFix_CurrentLine].strip()
-                    # open_filepaths(self, clean_filepath(filename))
-                    # TODO add try catch
-                    file_path=filename.split(":")[0]
-                    line_num=filename.split(":")[1]
-                    if os.path.isfile(file_path):
-                        print("Opening file_path '%s'" % (file_path))
-                        self.view.window().open_file("{0}:{1}".format(file_path,line_num), sublime.ENCODED_POSITION)
+        if action in ["next", "prev"]:
 
-                    else:
-                        print("No filename discovered")
+            with open(QUICKFIX_CUSTOM_FILE) as f:
+                txt = f.read()
+                inc = 1 if action == "next" else -1
+                QuickFix_CurrentLine += inc
+                QuickFix_CurrentLine = (
+                    0
+                    if QuickFix_CurrentLine >= len(txt.splitlines())
+                    else QuickFix_CurrentLine
+                )
+                filename = txt.splitlines()[QuickFix_CurrentLine].strip()
+                # open_filepaths(self, clean_filepath(filename))
+                # TODO add try catch
+                file_path=filename.split(":")[0]
+                line_num=filename.split(":")[1]
+                if os.path.isfile(file_path):
+                    print("Opening file_path '%s'" % (file_path))
+                    self.view.window().open_file("{0}:{1}".format(file_path,line_num), sublime.ENCODED_POSITION)
+
+                else:
+                    print("No filename discovered")
         elif action == "open":
             # TODO open at current active match
             self.view.window().open_file(QUICKFIX_CUSTOM_FILE, sublime.ENCODED_POSITION)

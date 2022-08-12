@@ -5,7 +5,12 @@ provides an easy way to **navigate back and forth through list of files** popula
 
 ![Alt Text](images/demo.gif)
 
+## Menu items
+
+![Alt Text](images/menu.png)
+
 - `Quickfix List: Next match`: Go to next match
+- `Quickfix List: Previous match`: Go to previous match
 - `Quickfix List: Open quickfix list file`: Open the custom file
 
 ## How to Use
