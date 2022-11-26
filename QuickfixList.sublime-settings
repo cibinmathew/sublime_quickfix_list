@@ -1,4 +1,4 @@
 {
     // Location of location list file
-    "QUICKFIX_CUSTOM_FILE": "/tmp/sublime_quickfix_list.txt"
+    "quickfix_custom_file": "~/.sublime_quickfix_list"
 }

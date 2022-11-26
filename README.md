@@ -9,9 +9,9 @@ provides an easy way to **navigate back and forth through list of files** popula
 - `Quickfix List: Open quickfix list file`: Open the custom file
 
 ## How to Use
-- Save/open `QUICKFIX_CUSTOM_FILE`. By default it is located at `/tmp/sublime_quickfix_list.txt`
+- Save/open `quickfix_custom_file`. By default it is located at `~/.sublime_quickfix_list`
 ```
-grep -inH quick "${PWD}"/*.py > /tmp/sublime_quickfix_list.txt
+grep -inH quick "${PWD}"/*.py > ~/.sublime_quickfix_list
  ```
 - From Command palette, run `Quickfix List: Next match`
 ## Key bindings

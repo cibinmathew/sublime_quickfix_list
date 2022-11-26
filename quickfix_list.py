@@ -20,12 +20,15 @@ settings_path = "QuickfixList.sublime-settings"
 
 
 class QuickfixList(sublime_plugin.TextCommand):
+
     def run(self, edit, action="next", next=True):
+
+        global QuickFix_CurrentLine
         self.settings = sublime.load_settings(settings_path)
         QUICKFIX_CUSTOM_FILE = self.settings.get(
-            "QUICKFIX_CUSTOM_FILE", "/tmp/sublime_quickfix_list.txt"
+            "quickfix_custom_file", "~/.sublime_quickfix_list"
         )
-        global QuickFix_CurrentLine
+        QUICKFIX_CUSTOM_FILE = os.path.expanduser(QUICKFIX_CUSTOM_FILE)
 
         if action == "next":
             for region in self.view.sel():
