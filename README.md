@@ -1,7 +1,7 @@
 # Quickfix List
 
 Inspired by vim [quickfix and location list](https://freshman.tech/vim-quickfix-and-location-list/), 
-provides an easy way to **navigate back and forth through list of files** populated by **grep**, **fzf**, search results etc
+This `Sublime Text` plugin provides an easy way to **navigate back and forth through list of files** populated by **grep**, **fzf**, search results etc
 
 ![Alt Text](images/demo.gif)
 
