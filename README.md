@@ -24,7 +24,8 @@ No default keybinding is provided. Use below sample as necessary
 ## How to Install
 
 ### Install with [Package Control](https://packagecontrol.io/installation)
-todo
+Install [`Quickfix List`](https://packagecontrol.io/packages/Quickfix%20List) using Package Control
+
 ### OR Install manually
 copy this repository into the [Packages](https://docs.sublimetext.io/guide/extensibility/packages.html#package-locations-and-abbreviations) directory
 1. cd into the packages directory. 
@@ -34,7 +35,7 @@ copy this repository into the [Packages](https://docs.sublimetext.io/guide/exten
   ```
 
 ### TODOs
-- [ ] Submit to package control channel
+- [x] Submit to package control channel
 - [ ] Support relative path
 - [ ] Support search results panel
 - [ ] Add FAQ section to readme
